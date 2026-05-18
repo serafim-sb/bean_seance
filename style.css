@@ -1,0 +1,1282 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+
+html {
+    scroll-behavior: smooth; /* Включает плавную анимацию прокрутки по всему сайту */
+}
+*, *::before, *::after {
+  box-sizing: border-box; 
+  margin: 0;              
+  padding: 0;            
+}
+.container {
+  max-width: 1200px;     
+  width: 100%;           
+  margin: 0 auto;        
+  padding: 0 15px;       
+}
+
+.header {
+    background-color: black;
+    padding: 20px 0;
+    position: absolute;  
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;         
+    background: transparent; 
+    padding: 20px 0;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Clicker Script", cursive;
+    font-weight: 400;
+    font-size: 35px;
+    color: #fff;
+}
+.header_link_wrapper {
+    display: flex;
+    gap: 60px;
+}
+.header_link {
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.header_link:hover {
+    color: gray;
+}
+
+.btn_order {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #1e1e1e;
+    border-radius: 24px;
+    height: 48px;
+    padding: 0 25px; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none; 
+    cursor: pointer;
+    box-shadow: 0 6px 12px 0 rgba(249, 192, 106, 0.22);
+    background: #f9c06a;
+    transition: all 0.3s ease;
+}
+
+.btn_order:hover{
+    transform: translateY(-3px);
+}
+
+.welcome {
+    position: relative;
+    background-image: url('coffee_image.png'); 
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;      
+    min-height: 100vh;          
+    display: flex;
+    align-items: center;
+    padding-top: 100px;         
+    
+}
+.welcome .container {
+    position: relative;
+    z-index: 2; 
+}
+.welcome::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1; 
+}
+
+.welcome_morning {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #fff;
+}
+.welcome_coffe {
+    font-family: "Clicker Script", cursive;
+    font-weight: 400;
+    font-size: 220px;
+    color: #fff;
+    
+}
+.welcome_desk {
+   padding: 25px 0;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 170%;
+    color: #fff;
+    width: 588px;
+}
+.discover{
+    padding-top: 150px;
+    
+}
+
+.discover .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    gap: 40px;
+    
+}
+ 
+.discover_title {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 48px;
+    color: #603809;
+    padding-bottom: 29px;
+}
+.discover_desk {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 170%;
+    color: #707070;
+    padding-bottom: 29px;
+}
+
+.img_disover {
+    max-width: 100%;    
+    height: auto;       
+    display: block;
+}
+
+.new_coffe {
+    padding-top: 150px;
+    padding-bottom: 85px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.new_coffe_title {
+    text-align: center;
+    padding-bottom: 16px;
+    
+}
+
+.new_coffe::after{
+    position: absolute;
+    background-image: url("coffee_blast.png");
+    content: "";
+    top: -120px;
+    left: -50px;
+    width: 498px;
+    height: 272px;
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: top left;
+    z-index: 1;
+
+}
+
+.new_coffe_desk {
+    text-align: center;
+    padding-bottom: 32px;
+}
+.new_coffe_wrapper {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.new_coffe_card {
+    background-color: #FFF9F1;
+    border: 1px solid rgba(249, 192, 106, 0.42);
+    width: 280px;
+    height: 364px;
+    text-align: center;
+}
+
+.new_coffe_card_title {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #603809;
+    padding-top: 14px;
+}
+.new_coffe_card_desk {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1e1e1e;
+    padding: 6px 0;
+}
+.new_coffe_card_price {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #603809;
+    padding-bottom: 10px;
+}
+
+.different{
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.different_title {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 48px;
+    color: #603809;
+    text-align: center;
+    padding-bottom: 16px;
+    
+}
+.different_desk {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 170%;
+    color: #707070;
+    text-align: center;
+    
+}
+.different_card_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.different_card {
+    border: 1px solid rgba(249, 192, 106, 0.42);
+    width: 280px;
+    height: 284px;
+    background: #fff9f1;
+    text-align: center;
+    transition: all ease 0.3s;
+}
+.img_different_card {
+    display: inline-block; 
+    margin-top: 36px;
+    
+}
+.different_card_title {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #603809;
+    padding-top: 14px;
+}
+.different_card_desk {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1e1e1e;
+    padding: 6px 0;
+}
+
+.different_card:hover{
+    background: #ffeed8;
+}
+
+.different_footer_desk {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #707070;
+    padding-top: 34px;
+}
+.different_footer_title {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 30px;    
+    color: #603809;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.btn_different{
+    display: block;    
+    margin: 0 auto;
+}
+.different::after{
+    position: absolute;
+    background-image: url("coffee_blast.png");
+    content: "";
+    top: -120px;
+    right: 0;
+    width: 498px;
+    height: 272px;
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: top left;
+    z-index: 1;
+    transform: scaleX(-1)
+
+}
+
+.get {
+    position: relative;
+    background-image: url('Group\ 36.png'); 
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    display: flex;   
+    overflow: hidden;
+    height: 575px;
+    
+}
+.get .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;            
+}
+
+.get_text {
+    width: 673px;
+}
+.get_title {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 54px;
+    color: #fff;
+    
+    
+}
+.get_desk {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 170%;
+    color: #fff;
+    padding: 22px 0;
+    
+}
+
+.get_img {
+    padding: 60px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.get::after{
+    position: absolute;
+    background-image: url("coffee_bean.png");
+    content: "";
+    top: 0;
+    right: 0;
+    width: 657px;
+    height: 574px;
+    background-position: bottom right;
+    background-size: contain; 
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+/* Затемненный фон вокруг модального окна */
+.modal_order_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(64, 38, 9, 0.6); /* Полупрозрачный фирменный коричневый */
+    backdrop-filter: blur(5px); /* Трендовое размытие заднего плана */
+    z-index: 1000; /* Выше всех элементов на сайте, включая бургер-меню */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Скрываем окно по умолчанию */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Класс, который делает окно видимым (будем добавлять через JS) */
+.modal_order_overlay.is_open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Само белое окошко формы */
+.modal_order_body {
+    background-color: #fff9f1; /* Твой фирменный нежный фон */
+    border: 1px solid rgba(249, 192, 106, 0.42);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 450px; /* Ограничение ширины */
+    padding: 40px 30px;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    
+    /* Анимация легкого всплытия окошка при открытии */
+    transform: translateY(-20px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal_order_overlay.is_open .modal_order_body {
+    transform: translateY(0);
+}
+
+/* Кнопка закрытия (крестик) */
+.modal_order_close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 36px;
+    background: transparent;
+    border: none;
+    color: #603809;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal_order_title {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    color: #603809;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.modal_order_subtitle {
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+/* Стили полей ввода внутри формы */
+.modal_order_form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal_order_input {
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    border: 1px solid rgba(249, 192, 106, 0.42);
+    border-radius: 8px;
+    background: #ffffff;
+    font-size: 16px;
+    color: #603809;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Специфика для выпадающего списка */
+.modal_order_select {
+    cursor: pointer;
+}
+
+/* Финальная кнопка отправки */
+.modal_order_submit_btn {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Адаптив для маленьких экранов (чтобы окно не прилипало к краям телефона) */
+@media (max-width: 480px) {
+    .modal_order_body {
+        max-width: 90%;
+        padding: 30px 20px;
+    }
+}
+
+.feedback {
+    position: relative;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.feedback::after{
+    position: absolute;
+    background-image: url("coffee_blast.png");
+    content: "";
+    top: 102px;
+    right: -130px;
+    background-position: bottom right;
+    background-size: contain; 
+    background-repeat: no-repeat;
+    z-index: 1;
+    transform: scaleX(-1);
+    width: 498px;
+    height: 272px;
+}
+.feedback::before{
+    position: absolute;
+    background-image: url("coffee_blast.png");
+    content: "";
+    bottom: -102px;
+    left: -130px;
+    background-position: bottom right;
+    background-size: contain; 
+    background-repeat: no-repeat;
+    z-index: 1;
+    transform: scaleX(-1);
+    transform: scaleY(-1);
+    width: 498px;
+    height: 272px;
+}
+
+
+.feedback_title {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 48px;
+    color: #603809;
+    text-align: center;
+    
+    
+}
+.feedback_desk {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 170%;
+    color: #707070;
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 45px;
+    
+}
+
+
+.slider_window {
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    position: relative;
+}
+.feedback_back {
+    border-radius: 16px;
+    width: 82px;
+    height: 82px;
+    box-shadow: 0 6px 12px 0 rgba(249, 192, 106, 0.22);
+    background: #f9c06a;
+    cursor: pointer;
+    position: absolute;
+    left: 45px;                 
+    z-index: 10;
+    transition: all ease 0.3s;
+}
+.slider {
+    border: 1px solid rgba(249, 192, 106, 0.42);
+    width: 980px;
+    height: 480px;
+    background: #fff9f1;
+    overflow: hidden; 
+    
+}
+.slider_track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; 
+    width: max-content;
+}
+.slider_item {
+    width: 980px;
+    flex-shrink: 0; 
+    box-sizing: border-box;
+}
+.slider_img {
+    display: block;
+    padding-top: 50px;
+    padding-left: 25px;
+    
+}
+.slider_text {
+    width: 780px;
+    margin: 0 auto;
+    width: 100%;             
+    max-width: 100%;
+}
+.slider_feedback {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 200%;
+    text-align: center;
+    color: #707070;
+    padding: 28px 0;
+}
+.slider_name {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #603809;
+    text-align: center;
+    padding-bottom: 23px;
+}
+.img_feedback {
+    display: block;
+    margin: 0 auto;
+    width: 133px;
+    height: 133px;
+    border-radius: 16px;
+       
+}
+.feedback_next {
+    border-radius: 16px;
+    width: 82px;
+    height: 82px;
+    box-shadow: 0 6px 12px 0 rgba(249, 192, 106, 0.22);
+    background: #f9c06a;
+    cursor: pointer;
+    position: absolute;
+    right: 45px;                 
+    z-index: 10;
+    transition: all ease 0.3s;
+}
+
+.feedback_next:hover{
+    background: #ce9e57;
+}
+.feedback_back:hover{
+    background: #ce9e57;
+}
+
+.email {
+    background-image: url('Group\ 36.png'); 
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    display: flex;   
+    height: 374px;
+}
+
+.email_title {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 54px;
+    color: #fff;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 16px;
+}
+.email_desk {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 170%;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 26px;
+}
+.email_wraper {
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    display: flex;              
+    align-items: center;
+    position: relative; 
+    width: 642px;
+
+    
+}
+.email_input {
+    font-family: "Playfair Display", serif;
+    border: 1px solid rgba(249, 192, 106, 0.42);
+    border-radius: 4px;
+    width: 642px;
+    height: 66px;
+    background: #fff9f1;
+    width: 100%;
+    z-index: 1;
+    padding-right: 150px;
+    outline: none;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 170%;
+    color: rgba(0, 0, 0, 0.34);
+    
+    
+}
+.email_btn {
+    top: 0;
+    right: 0;
+    z-index: 2;
+    position: absolute;
+    width: 137px;
+    height: 66px;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #603809;
+    background: #f9c06a;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px 0 rgba(249, 192, 106, 0.22);
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.email_btn:hover{
+    background: #ce9e57;
+}
+
+.footer {
+    background-image: 
+        linear-gradient(rgba(68, 40, 8, 0.75), rgba(68, 40, 8, 0.75)),
+        url('fotter_image.png'); 
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0;; /* Большой отступ снизу, чтобы текст не перекрывал зерна */
+    color: #ffffff;
+}
+
+/* Контейнер выстраивает 4 колонки в ряд */
+.footer_container {
+    display: flex;
+    justify-content: space-between; /* Раздвигает колонки по краям */
+    align-items: flex-start;
+    max-width: 1140px; /* Задайте ширину под ваш проект */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Общие стили для колонок */
+.footer_column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Специфика первой колонки бренда (делаем ее чуть шире остальных) */
+.footer_brand {
+    width: 360px;
+}
+
+.footer_logo {
+    font-family: "Playfair Display", serif; /* Или ваш рукописный шрифт */
+    font-size: 42px;
+    margin-bottom: 24px;
+}
+
+.footer_text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.75); /* Делаем текст мягче, не ядовито-белым */
+    margin-bottom: 30px;
+}
+
+/* Иконки соцсетей */
+.social_icons {
+    display: flex;
+    gap: 15px; /* Зазор между круглыми иконками */
+}
+
+/* Стили для заголовков колонок */
+.footer_title {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+/* Списки ссылок */
+.footer_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer_list li {
+    margin-bottom: 18px; /* Расстояние между ссылками по вертикали */
+}
+
+.footer_link {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer_link:hover {
+    color: #f9c06a; /* Подсвечиваем цветом бренда при наведении */
+}
+
+/* Правая колонка с контактами */
+.footer_contacts {
+    width: 280px;
+}
+
+.footer_info {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    color: rgba(255, 255, 255, 0.75);
+}
+.cupep{
+    position: relative;
+}
+.cupep::after{
+    position: absolute;
+    background-image: url("pngwing.png");
+    content: "";
+    top: 176px;
+    left: 0;
+    background-position: bottom right;
+    background-size: contain; 
+    background-repeat: no-repeat;
+    z-index: 1;
+    transform: scaleX(-1);
+    width: 262px;
+    height: 350px;
+}
+
+.cupep::before{
+    position: absolute;
+    background-image: url("pngwing.png");
+    content: "";
+    top: 176px;
+    right: 0;
+    background-position: bottom right;
+    background-size: contain; 
+    background-repeat: no-repeat;
+    z-index: 1;
+    width: 262px;
+    height: 350px;
+}
+
+@media (max-width: 768px) {
+    /* Карточки преимуществ встают в один столбик */
+    .different_card_wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .new_coffe_wrapper{
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+    
+    /* Колонки футера встают в один столбик */
+    .footer_container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Центрируем текст для красоты */
+        gap: 40px;
+    }
+    
+    .footer_brand {
+        width: 100%; /* Убираем фиксированную ширину */
+    }
+    .header .container {
+        flex-wrap: wrap; /* Разрешаем элементам переноситься на новую строку */
+        gap: 15px;
+        justify-content: space-between;
+    }
+
+    /* Логотип и кнопка остаются в первом ряду по краям */
+    .logo {
+        font-size: 24px;
+    }
+
+    .header .btn_order {
+        padding: 8px 16px; /* Делаем кнопку чуть компактнее на телефоне */
+        font-size: 14px;
+    }
+
+    /* Ссылки меню переносим на второй ряд и центрируем */
+    .header_link_wrapper {
+        width: 100%; /* Растягиваем обертку на всю ширину, чтобы она ушла вниз */
+        justify-content: center; /* Центрируем ссылки */
+        gap: 15px; /* Уменьшаем расстояние между ссылками */
+        order: 3; /* Жестко задаем позицию третьим элементом (снизу) */
+    }
+
+    .header_link {
+        font-size: 15px;
+    }
+
+    /* --- АДАПТАЦИЯ ПЕРВОГО ЭКРАНА (WELCOME) --- */
+    .welcome .container {
+        padding: 0 20px; /* Уменьшаем гигантские десктопные отступы */
+        text-align: center; /* Центрируем весь текст для мобильного формата */
+    }
+
+    .welcome_morning {
+        font-size: 20px; /* Уменьшаем размер подзаголовка */
+        line-height: 140%;
+    }
+
+    .welcome_coffe {
+        font-size: 54px; /* Огромное слово "Coffee" сжимаем, чтобы оно не вылезало за экран */
+        margin: 10px 0;
+    }
+
+    .welcome_desk {
+        font-size: 15px;
+        padding-bottom: 25px;
+        margin: 0 auto;
+        width: 100%;       /* Блок занимает всю доступную ширину экрана */
+        max-width: 400px;   /* Но на экранах пошире он не станет больше 400px */
+        box-sizing: border-box;
+    }
+
+    .welcome .btn_order {
+        display: block;
+        margin: 0 auto; /* Центрируем главную кнопку */
+        width: 80%; /* Делаем её удобной для нажатия пальцем */
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Слайдер сжимается под размеры экрана планшета/телефона */
+    .slider {
+        width: 100%;             /* Занимает всю ширину экрана телефона */
+        max-width: 100%;
+        overflow: hidden;        /* Прячет скрытые отзывы */
+        position: relative;
+    }
+
+    /* Лента отзывов */
+    .slider_track {
+        display: flex;
+        width: 100%;             /* Начальная ширина */
+        transition: transform 0.5s ease-in-out;
+    }
+
+    /* Каждый отзыв внутри ленты */
+    .slider_item {
+        width: 100%;             /* ИСПРАВЛЕНИЕ: строго 100% от ширины родительского .slider (НЕ 100vw!) */
+        flex-shrink: 0;          /* ИСПРАВЛЕНИЕ: запрещает флексу сжимать карточки отзывов в кашу */
+        box-sizing: border-box;  /* Чтобы паддинги не раздували ширину карточки */
+        padding: 0 20px;         /* Безопасные отступы для текста по бокам */
+    }
+
+    .slider_text {
+        width: 100%;             /* Текст растягивается на всю доступную ширину слайда */
+        max-width: 100%;
+    }
+    
+    .cupep::after, .cupep::before, .new_coffe::after,.different::after,.different::after,.feedback::before,.feedback::after {
+        display: none; /* Полностью скрываем чашки на планшетах и телефонах */
+    }
+    .discover .container {
+        flex-direction: column;    /* Текст и картинка встают друг под друга */
+        text-align: center;        /* Центрируем заголовок и описание */
+        gap: 30px;                 /* Отступ между текстом и чашкой */
+        padding: 0 20px;           /* Боковые отступы, чтобы текст не лип к краям экрана */
+    }
+
+    .discover_wrapper {
+        max-width: 100%;           /* Разрешаем тексту занимать всю ширину экрана */
+    }
+
+    .discover_desk {
+        margin-bottom: 20px;       /* Зазор перед кнопкой */
+    }
+
+    .discover .btn_order {
+        display: block;
+        margin: 0 auto;            /* Идеально центрируем кнопку "Читать ещё" */
+    }
+
+    .img_disover {
+        max-width: 100%;           /* Картинка автоматически сжимается под размер телефона */
+        width: 100%;
+        height: auto;
+    }
+    .get .container {
+        flex-direction: column;    /* Текст и картинка встают в один столбик */
+        text-align: center;        /* Центрируем заголовок и описание */
+        gap: 40px;                 /* Отступ между текстом и чашкой */
+        padding: 0 20px;           /* Отступы от краев экрана */
+    }
+
+    .get_text {
+        max-width: 100%; 
+        padding-top: 120px;          /* Текст теперь занимает всю ширину */
+    }
+
+    .get_title {
+        font-size: 32px;           /* Чуть уменьшаем заголовок под мобильные */
+        line-height: 130%;
+    }
+
+    .get_desk {
+        font-size: 16px;           /* Делаем описание компактным */
+        margin-bottom: 25px;
+    }
+
+    .get .btn_order {
+        display: block;
+        margin: 0 auto;            /* Центрируем кнопку "Заказать" */
+    }
+
+    .get_img_wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+           /* Центрируем обертку картинки */
+    }
+
+    .get_img {
+        max-width: 100%;           /* Картинка автоматически сжимается под размер телефона */
+        height: auto;
+        display: none;
+    }
+    .get::after{
+        display: none;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .email_title{
+        font-size: 32px;
+        padding-top: 35px;
+    }
+    .email_wraper {
+    position: relative;
+    width: 100%;
+    max-width: 642px; /* Ограничиваем ширину, но делаем её резиновой */
+    margin: 0 auto;
+    box-sizing: border-box;
+    }
+
+    .email_input {
+        border: 1px solid rgba(249, 192, 106, 0.42);
+        border-radius: 4px; /* Оставляем общее скругление блока */
+        width: 100%;
+        height: 66px;
+        background: #fff9f1;
+        padding-left: 20px;
+        padding-right: 150px; /* Чтобы вводимый текст не уходил под кнопку */
+        
+        /* ИСПРАВЛЕНИЯ БАГА: */
+        box-sizing: border-box; /* Включает границы и паддинги в общую высоту 66px */
+        outline: none;          /* Убирает обводку браузера при фокусе */
+        display: block;         /* Избавляет от дефолтных инлайновых отступов */
+    }
+
+    .email_btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 137px;
+        height: 66px; /* Высота строго совпадает с инпутом */
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        font-size: 18px; /* Немного уменьшили, чтобы слово не переносилось */
+        color: #603809;
+        background: #f9c06a;
+        border: none;
+        
+        /* ИСПРАВЛЕНИЯ БАГА: */
+        border-radius: 0 4px 4px 0; /* Скругляем углы ТОЛЬКО справа */
+        box-sizing: border-box;     /* Гарантирует высоту ровно 66px */
+        cursor: pointer;
+        box-shadow: 0 6px 12px 0 rgba(249, 192, 106, 0.22);
+    }
+}
+
+/* --- СТИЛИ ДЛЯ БУРГЕРА И МОДАЛКИ (По умолчанию скрыты на ПК) --- */
+.burger_menu_btn {
+    display: none; /* Скрыто на компьютерах */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 20;
+}
+
+.burger_menu_btn span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #603809; /* Цвет полосок под ваш бренд */
+    border-radius: 2px;
+}
+
+/* Мобильное полноэкранное окно */
+.mobile_menu {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Изначально спрятано за левым краем экрана */
+    width: 100%;
+    height: 100vh;
+    background-color: #fff9f1; /* Нежный цвет вашей кофейни */
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.4s ease-in-out; /* Плавное выезжание */
+}
+
+/* Класс, который мы будем добавлять через JS для открытия */
+.mobile_menu.active {
+    left: 0; 
+}
+
+/* Кнопка закрытия (крестик) */
+.close_menu_btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 45px;
+    background: transparent;
+    border: none;
+    color: #603809;
+    cursor: pointer;
+}
+
+/* Вертикальный список ссылок внутри модалки */
+.mobile_link_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.mobile_link {
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: #603809;
+    text-decoration: none;
+}
+
+.mobile_btn_order {
+    margin-top: 15px;
+    padding: 12px 35px;
+    font-size: 18px;
+}
+
+/* --- МЕДИА-ЗАПРОС ДЛЯ МОБИЛОК (До 768px) --- */
+@media (max-width: 768px) {
+    /* Прячем десктопные ссылки и кнопку */
+    .header_link_wrapper,
+    .header_desktop_btn {
+        display: none !important;
+    }
+
+    /* Показываем кнопку-бургер */
+    .burger_menu_btn {
+        display: flex;
+    }
+    .btn_moble{
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Сжимаем заголовки секции отзывов */
+    .feedback_title {
+        font-size: 28px;
+        padding: 0 15px;
+    }
+    
+    .feedback_desk {
+        font-size: 16px;
+        padding: 10px 15px 30px 15px;
+    }
+
+    /* Делаем окно слайдера полностью резиновым */
+    .slider {
+        width: 100%;             /* Занимает всю ширину телефона */
+        max-width: 100%;
+        height: auto;            /* Разрешаем высоте расти, если текст длинный */
+        padding-bottom: 30px;    /* Зазор для аватарки внизу */
+    }
+
+    /* Каждый слайд теперь тоже подстраивается под ширину экрана смартфона */
+    .slider_item {
+        width: 100vw;            /* Переводим ширину на 100% от текущего окна просмотра */
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;  /* Выстраиваем элементы отзыва (кавычки, текст) в столбик */
+        align-items: center;
+        padding: 0 20px;         /* Боковые защитные отступы для текста */
+    }
+
+    /* Ужимаем блок с текстом отзыва */
+    .slider_text {
+        width: 100%;             /* Убираем десктопные 780px */
+        max-width: 100%;
+    }
+
+    .slider_feedback {
+        font-size: 15px;         /* Уменьшаем шрифт самого отзыва */
+        line-height: 160%;
+        padding: 15px 0;
+    }
+
+    .slider_name {
+        font-size: 22px;         /* Уменьшаем имя автора */
+        padding-bottom: 20px;
+    }
+
+    /* Сжимаем декоративную кавычку/картинку hg.png сверху */
+    .slider_img {
+        padding-top: 25px;
+        padding-left: 0;         /* Центрируем кавычку */
+        margin: 0 auto;
+        max-width: 50px;         /* Делаем ее аккуратной */
+    }
+
+    /* --- ПЕРЕНОС КНОПОК ПОД СЛАЙДЕР --- */
+     .slider_window {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px; /* Зазор между нижней гранью слайдера и кнопками */
+    }
+
+    /* НОВЫЙ КЛАСС: Выстраивает кнопки в один красивый ряд по центру */
+    .slider_controls {
+        display: flex;
+        justify-content: center; /* Центрирует пару кнопок на экране */
+        gap: 15px;               /* Зазор между самими кнопками */
+        width: 100%;
+    }
+
+    /* Корректируем сами кнопки в мобильной версии */
+    .feedback_back, 
+    .feedback_next {
+        position: static;        /* Сбрасываем десктопный absolute */
+        width: 60px;             /* Делаем кнопки чуть аккуратнее на телефонах */
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;               /* Обнуляем лишние отступы */
+    }
+
+    /* Возвращаем инверсию стрелки для левой кнопки */
+    .feedback_back {
+        transform: scaleX(-1);   
+    }
+    /* Чтобы две кнопки стояли в один ряд под слайдером, можно обернуть их в контейнер, 
+       либо они встанут друг за другом во флекс-контейнере .slider_window */
+}
+

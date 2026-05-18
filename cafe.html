@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">Bean Scene</div>
+            <div class="header_link_wrapper">
+                <a href="#welcome" class="header_link">Главная</a>
+                <a href="#discover" class="header_link">Меню</a> <!-- Ведет к блоку "Попробуйте лучший кофе" -->
+                <a href="#feedback" class="header_link">Про нас</a>
+                <a href="#footer" class="header_link">Контакты</a>               
+            </div>
+            <button class="btn_order btn_moble">Заказать</button>
+            <button class="burger_menu_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="mobile_menu">
+                <button class="close_menu_btn">&times;</button>
+                <div class="mobile_link_wrapper">
+                    <a href="#welcome" class="mobile_link">Главная</a>
+                    <a href="#discover" class="mobile_link">Меню</a>
+                    <a href="#feedback" class="mobile_link">Про нас</a>
+                    <a href="#footer" class="mobile_link">Контакты</a>
+                    <button class="btn_order mobile_btn_order">Заказать</button>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+    <!-- МОДАЛЬНОЕ ОКНО ЗАКАЗА -->
+    <div class="modal_order_overlay" id="orderModal">
+        <div class="modal_order_body">
+            <!-- Кнопка-крестик для закрытия -->
+            <button class="modal_order_close">&times;</button>
+            
+            <h2 class="modal_order_title">Оформить заказ</h2>
+            <p class="modal_order_subtitle">Оставьте ваши данные, и наш бариста свяжется с вами для подтверждения заказа.</p>
+            
+            <!-- Форма-пустышка -->
+            <form class="modal_order_form" onsubmit="event.preventDefault();">
+                <input type="text" class="modal_order_input" placeholder="Ваше имя" required>
+                <input type="tel" class="modal_order_input" placeholder="Номер телефона" required>
+                
+                <select class="modal_order_input modal_order_select">
+                    <option value="espresso">Эспрессо</option>
+                    <option value="cappuccino" selected>Капучино</option>
+                    <option value="latte">Латте</option>
+                    <option value="raf">Раф кофе</option>
+                </select>
+                
+                <button type="submit" class="btn_order modal_order_submit_btn">Отправить заказ</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="welcome" id="welcome">
+        <div class="container">
+            <h2 class="welcome_morning">Мы позаботились о вашем утре: начните его с</h2>
+            <h1 class="welcome_coffe">Coffe</h1>
+            <p class="welcome_desk">Лучшее начало дня — это чашка кофе. Откройте для себя самые богатые вкусовые оттенки, которые вы когда-либо пробовали. Мы предлагаем нашим гостям только лучшее</p>
+            <button class="btn_order">Заказать</button>
+        </div>
+    </section>
+    <section class="discover">
+        <div class="container">
+            <div class="discover_wrapper">
+                <h1 class="discover_title">Попробуйте лучший кофе</h1>
+                <div class="discover_desk">Bean Scene — это кофейня, где вас ждет исключительный кофе, который заряжает продуктивностью и дарит отличное настроение. Выпить чашку кофе — хорошо, но выпить чашку настоящего, правильно сваренного кофе — бесценно. Вы точно влюбитесь в этот вкус с первого глотка</div>
+                <button class="btn_order">Читать ещё</button>
+            </div>
+            <img src="stylized-cup-coffee-out-coffee-beans-flat-lay 1.png" alt="" class="img_disover">
+        </div>
+    </section>
+    <section class="new_coffe" id="discover">
+        <div class="container">
+            <h1 class="discover_title new_coffe_title">Насладитесь новым вкусом и стилем кофе</h1>
+            <p class="discover_desk new_coffe_desk">Откройте для себя всё многообразие кофейных вкусов. Каждая чашка — это новое незабываемое впечатление</p>
+            <div class="new_coffe_wrapper">
+                <div class="new_coffe_card">
+                    <img src="new_cofe_1.png" alt="" class="new_coffe_card_img">
+                    <h1 class="new_coffe_card_title">Cappuccino</h1>
+                    <p class="new_coffe_card_desk">Кофе 50%|Молоко 50%</p>
+                    <div class="new_coffe_card_price">$8.50</div>
+                    <button class="btn_order">Заказать</button>
+                </div>
+                <div class="new_coffe_card">
+                    <img src="Rectangle_2.png" alt="" class="new_coffe_card_img">
+                    <h1 class="new_coffe_card_title">Chai Latte</h1>
+                    <p class="new_coffe_card_desk">Кофе 50%|Молоко 50%</p>
+                    <div class="new_coffe_card_price">$8.50</div>
+                    <button class="btn_order">Заказать</button>
+                </div>
+                <div class="new_coffe_card">
+                    <img src="Rectangle _3.png" alt="" class="new_coffe_card_img">
+                    <h1 class="new_coffe_card_title">Macchiato</h1>
+                    <p class="new_coffe_card_desk">Кофе 50%|Молоко 50%</p>
+                    <div class="new_coffe_card_price">$8.50</div>
+                    <button class="btn_order">Заказать</button>
+                </div>
+                <div class="new_coffe_card">
+                    <img src="Rectangle_4.png" alt="" class="new_coffe_card_img">
+                    <h1 class="new_coffe_card_title">Expresso</h1>
+                    <p class="new_coffe_card_desk">Кофе 50%|Молоко 50%</p>
+                    <div class="new_coffe_card_price">$8.50</div>
+                    <button class="btn_order">Заказать</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="different">
+        <div class="container">
+            <h1 class="different_title">Почему мы уникальны?</h1>
+            <p class="different_desk">Мы не просто варим вам кофе — мы делаем ваш день!</p>
+            <div class="different_card_wrapper">
+                <div class="different_card">
+                    <img src="card_1.png" alt="" class="img_different_card">
+                    <div class="different_card_title">Высший сорт</div>
+                    <div class="different_card_desk">Зерна, которые дарят великолепный вкус.</div>
+                </div>
+                <div class="different_card">
+                    <img src="card_2.png" alt="" class="img_different_card">
+                    <div class="different_card_title">Премиум качество</div>
+                    <div class="different_card_desk">Гарантируем высшее качество</div>
+                </div>
+                <div class="different_card">
+                    <img src="card_3.png" alt="" class="img_different_card">
+                    <div class="different_card_title">Необычайный</div>
+                    <div class="different_card_desk">Кофе, который вы еще не пробовали</div>
+                </div>
+                <div class="different_card">
+                    <img src="card_4.png" alt="" class="img_different_card">
+                    <div class="different_card_title">Доступная цена</div>
+                    <div class="different_card_desk">Цены, которые радуют </div>
+                </div>
+            </div>
+            <p class="different_footer_desk">Великие идеи начинаются с отличного кофе, позвольте нам помочь вам в этом</p>
+            <div class="different_footer_title">Начните сегодня</div>
+            <button class="btn_order btn_different">Присоединяйтесь</button>
+        </div>       
+    </section>
+    <section class="get">
+        <div class="container">
+            <div class="get_text">
+                <div class="get_title">Получите шанс провести потрясающее утро</div>
+                <div class="get_desk">Мы даем вам уникальную возможность изменить жизнь к лучшему с помощью кофе</div>
+                <button class="btn_order">Заказать</button>
+            </div>
+            <div class="get_img_wrapper">
+                <img src="cup.png" alt="" class="get_img">
+            </div>           
+        </div>
+    </section>
+    <section class="feedback" id="feedback">
+        <div class="container">
+            <div class="feedback_title">
+                Отзывы о нашем совершенном кофе
+            </div>
+            <div class="feedback_desk">Наши клиенты говорят о нас потрясающие вещи</div>
+            <div class="slider_window">
+                <div class="slider">
+                    <div class="slider_track">
+                        <div class="slider_item">
+                            <img src="hg.png" alt="" class="slider_img">
+                            <div class="slider_text">
+                                <div class="slider_feedback">Как менеджер проектов, я ценю стабильность, фокус и качество. Этот кофе — идеальный инструмент для настройки на сложный день. Помогает сохранять концентрацию во время долгих созвонов и дедлайнов. Рекомендую!</div>
+                                <div class="slider_name">Артём Петров</div>
+                                <img src="photo_1.png" alt="" class="img_feedback">
+                            </div>
+                        </div>
+                        <div class="slider_item">
+                            <img src="hg.png" alt="" class="slider_img">
+                            <div class="slider_text">
+                                <div class="slider_feedback">Я довольно привередлив в выборе эспрессо, но Bean Scene приятно удивили. Правильная плотная крема, идеальный баланс кислинки и горчинки, чувствуется благородный сорт и свежая обжарка. Видно, что ребята не просто продают напитки, а любят кофейную культуру. Однозначно пять звезд за качество зерна.</div>
+                                <div class="slider_name">Егор Лукашук</div>
+                                <img src="photo_w.jpg" alt="" class="img_feedback">
+                            </div>
+                        </div>
+                        <div class="slider_item">
+                            <img src="hg.png" alt="" class="slider_img">
+                            <div class="slider_text">
+                                <div class="slider_feedback">Настоящая находка для тех, кто работает на удаленке. Вкус у рафа просто бомбический — мягкий, сливочный, без лишней приторности. Но главное здесь — это атмосфера. Спокойная музыка, вежливые бариста, которые помнят твоё имя, и потрясающий аромат зерен. Место, куда хочется возвращаться за вдохновением!</div>
+                                <div class="slider_name">Гриша Липовый</div>
+                                <img src="photo_2.jpg" alt="" class="img_feedback">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider_controls">
+                    <button class="feedback_back" style="transform: scaleX(-1)"><img src="Vector.png" alt=""></button>
+                    <button class="feedback_next"><img src="Vector.png" alt=""></button>
+                </div>
+            </div>
+            
+            
+        </div>
+
+    </section>
+    <div class="cupep">
+    <section class="email">
+            <div class="container">
+                <div class="email_title">Получайте свежие новости</div>
+                <div class="email_desk">Не пропустите наши свежие новости, обновления, полезные советы и специальные предложения!</div>
+                <div class="email_wraper">
+                    <input type="email" class="email_input" placeholder="Введите ваш email">
+                    <button class="email_btn">Подписаться</button>
+                </div>
+            </div>
+        </section>
+        <footer class="footer"  id="footer">
+            <div class="container footer_container">
+                
+                <!-- Колонка 1: О бренде и соцсети -->
+                <div class="footer_column footer_brand">
+                    <h2 class="footer_logo">Bean Scene</h2>
+                    <p class="footer_text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    </p>
+                    <div class="social_icons">
+                        <a href="#" class="social_link"><img src="face.png" alt="Facebook"></a>
+                        <a href="#" class="social_link"><img src="insta.png" alt="Instagram"></a>
+                        <a href="#" class="social_link"><img src="you.png" alt="YouTube"></a>
+                        <a href="#" class="social_link"><img src="twit.png" alt="Twitter"></a>
+                    </div>
+                </div>
+
+                <!-- Колонка 2: Навигация About -->
+                <div class="footer_column">
+                    <h3 class="footer_title">Про нас</h3>
+                    <ul class="footer_list">
+                        <li><a href="#" class="footer_link">Меню</a></li>
+                        <li><a href="#" class="footer_link">Особенности</a></li>
+                        <li><a href="#" class="footer_link">Новости</a></li>
+                        <li><a href="#" class="footer_link">Помощь</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка 3: Навигация Company -->
+                <div class="footer_column">
+                    <h3 class="footer_title">Компания</h3>
+                    <ul class="footer_list">
+                        <li><a href="#" class="footer_link">Время работы</a></li>
+                        <li><a href="#" class="footer_link">Обслуживание</a></li>
+                        <li><a href="#" class="footer_link">Цены</a></li>
+                        <li><a href="#" class="footer_link">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка 4: Контакты -->
+                <div class="footer_column footer_contacts" >
+                    <h3 class="footer_title">Контакты</h3>
+                    <p class="footer_info">Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016</p>
+                    <p class="footer_info"><a href="tel:+12029182132" class="footer_link">+1 202-918-2132</a></p>
+                    <p class="footer_info"><a href="mailto:beanscene@mail.com" class="footer_link">beanscene@mail.com</a></p>
+                    <p class="footer_info"><a href="https://beanscene.com" target="_blank" class="footer_link">://beanscene.com</a></p>
+                </div>
+
+            </div>
+    </footer>
+    </div>
+    
+
+    <script src="js.js"></script>
+</body>
+</html>
