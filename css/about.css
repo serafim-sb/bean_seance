@@ -1,0 +1,832 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
+:root {
+  --font-family: "Inter", sans-serif;
+  --font3: "Imperial Script", sans-serif;
+  --second-family: "Abhaya Libre", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh; 
+  scroll-behavior: smooth; 
+  text-rendering: optimizeSpeed;
+  line-height: 1.5; 
+}
+
+.container {
+  max-width: 1400px;     
+  width: 100%;           
+  margin: 0 auto;        
+  padding: 0 15px; 
+}
+
+ul, ol {
+  list-style: none;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+.skidka {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background: #6b0606;
+    padding: 11px 0;
+    gap: 10px;
+}
+.skidka_text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    
+}
+
+.header .container  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 32px;
+}
+
+.social_media {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    
+
+}
+.header_link {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    transition: all 0.3s ease;
+}
+.header_link:hover{
+  font-weight: 600;
+}
+
+
+.welcome .container {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.welcome_text {
+  font-family: var(--font3);
+  font-weight: 400;
+  font-size: 100px;
+  color: #6b0606;
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding-bottom: 40px;
+}
+
+.welcome_text::after{
+    content: "";
+    background-image: url("../img/lotus_big.png");
+    position: absolute;
+    display: block; /* Позволяет задать ширину и высоту */
+    background-size: contain; /* Картинка автоматически впишется в 256x256px */
+    background-repeat: no-repeat; /* Запрещает повторение картинки */
+    width: 256px;
+    height: 256px;
+    right: 16px;
+    top: -64px;
+    z-index: 1;
+
+}
+
+.welcome_img{
+  background-image: url('../img/about.png'); 
+  max-width: 1920px; /* Картинка не станет шире этого значения */
+  margin: 0 auto;    /* Центрируем блок на огромных мониторах */
+  height: 520px;
+  background-size: cover;
+  background-position: center;
+}
+
+.burger_menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100; /* Чтобы бургер всегда был поверх модалки */
+}
+.promo-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.promo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promo-title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+    color: #6b0606;
+    padding-bottom: 40px;
+}
+
+.promo-content {
+  display: flex;
+  gap: 50px; /* Немного увеличил отступ для удобства чтения на русском */
+  width: 100%;
+  align-items: start;
+
+}
+
+.promo-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 0.95rem;
+
+}
+
+/* Выравнивание правой колонки по нижнему краю */
+.promo-column.justify-bottom {
+  justify-content: flex-end;
+}
+
+.promo-subtitle {
+  font-family: var(--font4);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 110%;
+    color: #6b0606;
+    padding-bottom: 20px;
+}
+
+.burger_menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100; /* Чтобы бургер всегда был поверх модалки */
+}
+
+.burger_menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #6b0606; /* Твой фирменный бордовый */
+    transition: all 0.3s ease;
+}
+.spa-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Верхняя розовая половина */
+.spa-top-bg {
+  background-color: #f7e6dc; /* Нежно-розовый/кремовый фон */
+  padding-top: 60px;
+  padding-bottom: 120px; /* Запас для наложения картинки */
+  text-align: center;
+}
+
+/* Нижняя белая половина */
+.spa-bottom-bg {
+  background-color: #ffffff;
+  padding-bottom: 60px;
+}
+
+.spa-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.spa-title {
+  font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+    color: #6b0606;
+}
+
+.spa-description {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  color: #7a6e67; /* Приглушенный цвет текста */
+}
+
+/* Контейнер для позиционирования картинки на стыке */
+.image-container {
+  position: relative;
+  margin-top: -100px; /* Смещаем картинку вверх на розовый фон */
+  display: flex;
+  justify-content: center;
+}
+
+.spa-image {
+  width: 100%;
+  max-width: 800px; /* Ограничение ширины фото как на макете */
+  height: auto;
+  display: block;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Легкая тень для объема */
+}
+.style-section {
+  width: 100%;
+  max-width: 1100px; /* Ограничение общей ширины секции */
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.style-section .container {
+  display: flex;
+  align-items: center; /* Центрирование по вертикали */
+  gap: 50px; /* Отступ между картинкой и текстом */
+}
+
+/* Блок с картинкой */
+.style-image-wrapper {
+  flex: 1;
+}
+
+.style-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Блок с контентом */
+.style-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Выравнивание элементов по левому краю */
+}
+
+.style-title {
+  font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 50px;
+    color: #6b0606;
+}
+
+.style-text {
+  font-size: 0.95rem;
+  color: #555555;
+  margin-bottom: 30px;
+}
+
+/* Стили кнопки */
+.style-button {
+  display: inline-block;
+  background-color: #6b1d1d; /* Бордовый фон кнопки */
+  color: #ffffff;
+  text-decoration: none;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  padding: 12px 35px;
+  transition: background-color 0.3s ease;
+}
+
+.style-button:hover {
+  background-color: #4a1212; /* Темный оттенок при наведении */
+}
+.partnior {
+    background: #f3e2d5;
+    padding: 39px 72px;
+   
+}
+.partnior .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.team {
+}
+.section {
+}
+.team_text {
+    margin: 0 auto;
+    text-align: center;
+
+}
+.team_title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+    color: #6b0606;
+    padding-top: 60px;
+}
+.team_desk {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 80px;
+    
+}
+.team_wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 50px 30px; 
+    
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+.team_card {
+    display: flex;
+    flex-direction: column; /* Элементы внутри идут друг за другом сверху вниз */
+    align-items: center;    /* Выравнивает аватарку, имя и иконки строго по центру */
+    text-align: center;
+    
+}
+.team_card.center{
+    transform: translateY(-40px); 
+}
+.team_img_wrapper {
+}
+.team_img {
+}
+.team_name {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #000;
+    padding-top: 16px;
+}
+.team_class {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 16px;
+}
+.team_social {
+    display: flex;
+    gap: 12px;
+}
+.team_social_media {
+}
+.banner-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 120px 0px;
+    background: #f3e2d5;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-section::after{
+    position: absolute;
+    background-image: url('../img/lotus_big.png');
+    background-repeat: no-repeat;
+    content: "";
+    bottom: -105px;
+    left: -107px;
+    width: 300px;
+    height: 300px;
+
+}
+.banner-section::before{
+    position: absolute;
+    background-image: url('../img/lotus_big.png');
+    background-repeat: no-repeat;
+    content: "";
+    top: -105px;
+    right: -107px;
+    width: 300px;
+    height: 300px;
+    transform: scaleY(-1) scaleX(-1);
+
+}
+
+.banner-container {
+  position: relative; /* База для абсолютного позиционирования текста */
+  width: 100%;
+  max-width: 900px; /* Ограничиваем максимальную ширину баннера */
+  height: 400px; /* Фиксированная высота для десктопа */
+  overflow: hidden; /* Чтобы картинка не вылезала за пределы */
+}
+
+/* Картинка на заднем плане */
+.banner-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Картинка заполняет блок без искажений */
+  display: block;
+}
+
+/* Контейнер с текстом строго по центру поверх картинки */
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.15); /* Легкое затемнение картинки для читаемости текста */
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Скидка */
+.banner-discount {
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Главный заголовок */
+.banner-title {
+  font-family: Georgia, serif;
+  font-size: 3rem;
+  font-weight: normal;
+  color: #ffffff;
+  margin-bottom: 25px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Тень для лучшей читаемости */
+}
+
+/* Кнопка */
+.banner-btn {
+  display: inline-block;
+  background-color: #6b0606; /* Фирменный бордовый цвет */
+  color: #ffffff;
+  text-decoration: none;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  padding: 12px 45px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.blog-section {
+  padding: 80px 20px;
+  width: 100%;
+}
+
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Заголовок секции */
+.blog-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.blog-title {
+  font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+    color: #6b0606;
+}
+
+.blog-subtitle {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Сетка карточек на Grid */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Обертка для квадратных картинок */
+.blog-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Жесткий квадрат как на макете */
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.blog-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Плитка даты поверх фото */
+.blog-date {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  background-color: #ffffff;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.date-month {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: #000;
+}
+
+.date-day {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 28px;
+    color: #6b0606;
+}
+
+/* Описание карточки */
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.blog-category {
+  font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    opacity: 0.5;
+}
+
+.blog-card-title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 20px;
+    color: #000;
+  margin-bottom: 15px;
+}
+
+/* Кнопка "Читать далее" */
+.blog-link {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    color: #6b0606;
+  margin-top: auto; /* Выравнивает все ссылки строго по нижней границе */
+  transition: color 0.2s ease;
+}
+
+.blog-link:hover {
+  color: #000000;
+}
+.footer {
+  background: #dfbfa8;
+  padding: 60px 0; /* Отступы сверху и снизу, чтобы футер не был зажатым */
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column; /* Выстраиваем все элементы строго в вертикальный столбик */
+  align-items: center;    /* Магия: центрирует абсолютно все элементы по горизонтали */
+  text-align: center;     /* Центрирует многострочный текст внутри <p> */
+}
+
+.footer_title::after {
+    content: "";
+    background-image: url(../img/lotus_big.png);
+    position: absolute;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 354px;
+    height: 392px;
+    right: -69px;
+    top: -144px;
+    z-index: 1;
+}
+
+.footer_title {
+  position: relative;
+  font-family: var(--font3);
+  font-weight: 400;
+  font-size: 50px;
+  color: #6b0606;
+}
+
+.footer_desk {
+  font-family: var(--font-family);
+  font-size: 14px;
+  color: #555;
+  max-width: 450px; /* Ограничиваем ширину текста, чтобы он красиво переносился */
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.footer_social_wraper {
+  display: flex;
+  gap: 12px; /* Расстояние между иконками/ссылками соцсетей */
+}
+
+.footer_link {
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Адаптивная сетка под гаджеты */
+@media (max-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 карточки в ряд на планшетах */
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-grid {
+    grid-template-columns: 1fr; /* 1 карточка в ряд на смартфонах */
+    gap: 40px;
+  }
+}
+@media (max-width: 768px) {
+    .burger_menu {
+        display: flex; /* Показываем бургер на мобилках */
+    }
+
+    /* Превращаем навигацию в полноэкранное модальное окно */
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Изначально меню полностью спрятано слева за экраном */
+        width: 100%;
+        height: 100vh;
+        background-color: #dfbfa8; /* Цвет фона футера/салона */
+        flex-direction: column;   /* Выстраиваем ссылки в столбик */
+        justify-content: center;
+        gap: 30px;
+        z-index: 90;
+        transition: left 0.4s ease; /* Плавное выезжание сбоку */
+    }
+
+    /* Класс, который будет добавлять JS при клике (открытая модалка) */
+    .navigation.open {
+        left: 0; /* Меню выезжает на весь экран */
+    }
+
+    /* На мобилках логотип внутри меню лучше скрыть или поставить наверх */
+    .header_img {
+        order: -1; /* Переносит логотип в самый верх списка */
+        margin-bottom: 20px;
+    }
+
+    .header_link {
+        font-size: 24px; /* Увеличиваем ссылки, чтобы по ним было удобно тапать */
+    }
+
+    /* Анимация превращения бургера в крестик при открытой модалке */
+    .burger_menu.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .burger_menu.open span:nth-child(2) {
+        opacity: 0; /* Прячем среднюю линию */
+    }
+    .burger_menu.open span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    .team_wrapper{
+         grid-template-columns: repeat(2, 1fr) !important;
+        gap: 40px 20px;
+        padding: 0 20px;
+        
+    }
+    .team_card.center{
+
+        transform: none;
+
+    }
+    .partnior .container {
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    }
+    .style-section .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    }
+    .promo-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    }
+    .skidka_img {
+    width: 24px;
+  }
+  .skidka_text {
+        font-size: 12px;
+    }
+}
+@media (max-width: 768px) {
+    .burger_menu {
+        display: flex; /* Показываем бургер на мобилках */
+    }
+
+    /* Превращаем навигацию в полноэкранное модальное окно */
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Изначально меню полностью спрятано слева за экраном */
+        width: 100%;
+        height: 100vh;
+        background-color: #dfbfa8; /* Цвет фона футера/салона */
+        flex-direction: column;   /* Выстраиваем ссылки в столбик */
+        justify-content: center;
+        gap: 30px;
+        z-index: 90;
+        transition: left 0.4s ease; /* Плавное выезжание сбоку */
+    }
+
+    /* Класс, который будет добавлять JS при клике (открытая модалка) */
+    .navigation.open {
+        left: 0; /* Меню выезжает на весь экран */
+    }
+
+    /* На мобилках логотип внутри меню лучше скрыть или поставить наверх */
+    .header_img {
+        order: -1; /* Переносит логотип в самый верх списка */
+        margin-bottom: 20px;
+    }
+
+    .header_link {
+        font-size: 24px; /* Увеличиваем ссылки, чтобы по ним было удобно тапать */
+    }
+
+    /* Анимация превращения бургера в крестик при открытой модалке */
+    .burger_menu.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .burger_menu.open span:nth-child(2) {
+        opacity: 0; /* Прячем среднюю линию */
+    }
+    .burger_menu.open span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}

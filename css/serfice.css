@@ -1,0 +1,959 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
+:root {
+  --font-family: "Inter", sans-serif;
+  --font3: "Imperial Script", sans-serif;
+  --second-family: "Abhaya Libre", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh; 
+  scroll-behavior: smooth; 
+  text-rendering: optimizeSpeed;
+  line-height: 1.5; 
+}
+
+.container {
+  max-width: 1400px;     
+  width: 100%;           
+  margin: 0 auto;        
+  padding: 0 15px; 
+}
+
+ul, ol {
+  list-style: none;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+.skidka {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background: #6b0606;
+    padding: 11px 0;
+    gap: 10px;
+}
+.skidka_text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    
+}
+
+.header .container  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 32px;
+}
+
+.social_media {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    
+
+}
+.header_link {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    transition: all 0.3s ease;
+}
+.header_link:hover{
+  font-weight: 600;
+}
+
+
+.welcome .container {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.welcome_text {
+  font-family: var(--font3);
+  font-weight: 400;
+  font-size: 100px;
+  color: #6b0606;
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding-bottom: 40px;
+}
+
+.welcome_text::after{
+  content: "";
+  background-image: url("../img/lotus_big.png");
+  position: absolute;
+  display: block; /* Позволяет задать ширину и высоту */
+  background-size: contain; /* Картинка автоматически впишется в 256x256px */
+  background-repeat: no-repeat; /* Запрещает повторение картинки */
+  width: 256px;
+  height: 256px;
+  right: -31px;
+  top: -64px;
+  z-index: 1;
+
+}
+
+.welcome_img{
+  background-image: url('../img/nate.png'); 
+  max-width: 1920px; /* Картинка не станет шире этого значения */
+  margin: 0 auto;    /* Центрируем блок на огромных мониторах */
+  height: 520px;
+  background-size: cover;
+  background-position: center;
+}
+
+.burger_menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100; /* Чтобы бургер всегда был поверх модалки */
+}
+
+.burger_menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #6b0606; /* Твой фирменный бордовый */
+    transition: all 0.3s ease;
+}
+.treat_wrapper_card {
+  display: flex;
+  gap: 100px; /* Подоберите оптимальный отступ вместо 200px */
+  align-items: center;
+  margin-bottom: 80px;
+}
+.treat_wrapper_card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.treat_welcome_title{
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 50px;
+    color: #6b0606;
+    padding-bottom: 20px;
+    text-align: center;
+    padding-top: 60px;
+}
+.treat_wrapper{
+     max-width: 550px;
+}
+
+.treat_wrapper {
+  flex: 1;           /* Распределяет место поровну */
+  max-width: 550px;  /* Выровняет первый, второй и все остальные блоки под один размер */
+  width: 100%;       /* Чтобы на телефонах не ломалось */
+}
+
+/* 2. Заставляем картинку стоять намертво и не сжиматься из-за текста */
+.treat_img {
+  flex-shrink: 0;    /* Запрещает тексту "сдавливать" картинку */
+  width: 450px;      /* Поставь тут ту ширину картинки, которая тебе нужна по макету */
+  height: auto;
+  object-fit: cover;
+}
+.treat_welcome_desk {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+  padding-bottom: 28px;
+  text-align: center;
+}
+.treat_tilte {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 50px;
+  color: #6b0606;
+  padding-bottom: 20px;
+}
+.treat_desk {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+  padding-bottom: 28px;
+}
+
+.treat_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  padding-bottom: 24px;
+}
+.treat_name {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  color: #000;
+  display: flex;
+  flex-grow: 1; /* Позволяет названию занимать всё свободное место */
+  align-items: baseline;
+}
+.treat_name::after {
+  content: "";
+  flex-grow: 1; /* Заставляет линию растягиваться между текстом и ценой */
+  margin: 0 8px;
+  border-bottom: 2px dotted #ccc;
+  height: 1px; /* Фиксирует высоту, чтобы линия не исчезала */
+}
+.treat_from{
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.treat_price {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #6b0606;
+}
+
+.teat_all{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #6b0606;
+  cursor: pointer;
+}
+.add {
+    background: #f3e2d5;
+    margin-top: 80px; /* Отступ снаружи сверху — отодвинет секцию от предыдущего блока */
+    padding: 60px 0;
+}
+.container {
+}
+.add_wraper {
+    margin-top: 100px;
+    padding: 60px;
+    width: 1076px;
+    height: 657px;
+    background: #fff;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.add_img {
+    height: 550px;
+    width: 334px;
+    
+    
+}
+.add_wraper_text {
+}
+.add_title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #6b0606;
+}
+.add_desk {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 40px;
+    color: #000;
+}
+.add_desk_2 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 138%;
+    color: rgba(0, 0, 0, 0.8);
+}
+.booking_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Вертикальный отступ между строками */
+}
+
+.form_row {
+  display: flex;
+  gap: 20px; /* Горизонтальный отступ между инпутами в одной строке */
+}
+
+.form_group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Отступ между <label> и <input> */
+}
+
+.form_group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+
+.form_group input,
+.form_group select {
+    width: 280px;;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #000;
+    background-color: #fff;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form_group input::placeholder {
+  color: #b3b3b3;
+}
+
+/* Кнопка отправки */
+.booking_btn {
+  background-color: #6b0606;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.booking_btn:hover {
+  background-color: #4a0404;
+}
+
+/* Все стили начинаются с класса секции, чтобы не влиять на глобальный CSS */
+
+.shop-section {
+  --shop-primary: #800020; /* Бордовый цвет макета */
+  --shop-muted: #8e8e8e;
+  
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.shop-section * {
+  box-sizing: border-box;
+}
+
+/* Шапка секции */
+.shop-section .shop-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.shop-section .shop-title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 50px;
+  text-align: center;
+  color: #6b0606;
+}
+
+.shop-section .subtitle {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  padding-bottom: 40px;
+}
+
+/* Навигация / Фильтры */
+.shop-section .categories {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.shop-section .category-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #000;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  padding-bottom: 4px; 
+  border-bottom: 2px solid transparent;
+  }
+
+.shop-section .category-btn.active, 
+.shop-section .category-btn:hover {
+  border-bottom: 2px solid #6b0606;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #6b0606;
+}
+
+/* Сетка товаров */
+.shop-section .products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 40px 30px;
+}
+
+/* Карточка товара */
+.shop-section .product-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shop-section .product-image-wrapper {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Серые силуэты вместо картинок */
+.shop-section .product-placeholder {
+  background-color: #f0f0f0;
+  width: 130px;
+  height: 130px;
+  border-radius: 4px;
+}
+
+.shop-section .product-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.shop-section .product-price {
+  color: var(--shop-muted);
+  font-size: 0.9rem;
+  margin: 0 0 12px 0;
+}
+
+/* Выбор объема */
+.shop-section .size-selector {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.shop-section .size-btn {
+  background-color: var(--shop-primary);
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.shop-section .size-btn.active,
+.shop-section .size-btn:hover {
+  opacity: 1;
+}
+
+/* Кнопка добавления */
+.shop-section .add-to-cart-btn {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  width: 100%;
+  margin-top: auto;
+  transition: background-color 0.2s;
+}
+
+.shop-section .add-to-cart-btn:hover {
+  background-color: var(--shop-primary);
+}
+
+/* Плывущий виджет корзины */
+.shop-section .shop-cart-widget {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+}
+
+.shop-section #open-cart-btn {
+  background: var(--shop-primary);
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.footer {
+  background: #dfbfa8;
+  padding: 60px 0; /* Отступы сверху и снизу, чтобы футер не был зажатым */
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column; /* Выстраиваем все элементы строго в вертикальный столбик */
+  align-items: center;    /* Магия: центрирует абсолютно все элементы по горизонтали */
+  text-align: center;     /* Центрирует многострочный текст внутри <p> */
+}
+
+.footer_title::after {
+    content: "";
+    background-image: url(../img/lotus_big.png);
+    position: absolute;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 354px;
+    height: 392px;
+    right: -69px;
+    top: -144px;
+    z-index: 1;
+}
+
+.footer_title {
+  position: relative;
+  font-family: var(--font3);
+  font-weight: 400;
+  font-size: 50px;
+  color: #6b0606;
+}
+
+.footer_desk {
+  font-family: var(--font-family);
+  font-size: 14px;
+  color: #555;
+  max-width: 450px; /* Ограничиваем ширину текста, чтобы он красиво переносился */
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.footer_social_wraper {
+  display: flex;
+  gap: 12px; /* Расстояние между иконками/ссылками соцсетей */
+}
+
+.footer_link {
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.cart-modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Когда у модалки есть этот класс — показываем её */
+.cart-modal.open {
+  display: flex;
+}
+
+.cart-modal-content {
+  background-color: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.cart-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.close-cart-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.cart-items-list {
+  max-height: 300px;
+  overflow-y: auto; /* Скролл, если товаров много */
+  padding: 20px 0;
+}
+
+.cart-modal-footer {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.checkout-btn {
+  background-color: #181818;
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cart-item-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.cart-item-title {
+  margin: 0 0 5px 0;
+  font-size: 0.95rem;
+}
+
+.cart-item-price {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #8e8e8e;
+}
+
+.cart-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cart-item-total {
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.remove-item-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #ff4d4d;
+  cursor: pointer;
+}
+.modal_cart_buy {
+  background-color: #fff;
+  padding: 30px;
+  width: 100%;
+  max-width: 450px; /* Ограничение ширины формы */
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Сделали тень чуть глубже */
+  font-family: var(--font-family), sans-serif;
+  box-sizing: border-box;
+  
+  display: none; /* Скрыто по умолчанию */
+  z-index: 110000;
+  position: fixed;
+  
+  /* Магия центрирования для фиксированного блока: */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Сдвигает блок ровно в центр экрана */
+}
+.modal_cart_buy.open {
+  display: block;
+}
+
+/* Заголовок формы */
+.modal_cart_buy h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #181818;
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Группа поля (контейнер для label + input) */
+.cart_form .form_group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+/* Стили заголовков полей */
+.cart_form .form_group label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Стили полей ввода (input) */
+.cart_form .form_group input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  color: #000;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+/* Эффект при клике в поле ввода (фокус) */
+.cart_form .form_group input:focus {
+  outline: none;
+  background-color: #fff;
+  border-color: #6b0606; /* Наш бордовый цвет */
+  box-shadow: 0 0 0 3px rgba(107, 6, 6, 0.1);
+}
+
+/* Плейсхолдер (серый текст-подсказка внутри инпута) */
+.cart_form .form_group input::placeholder {
+  color: #b0b0b0;
+}
+
+/* Кнопка отправки заказа */
+.cart_form .submit-order-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #181818;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+/* Эффект наведения на кнопку */
+.cart_form .submit-order-btn:hover {
+  background-color: #6b0606; /* Кнопка становится бордовой при наведении */
+}
+
+/* Эффект нажатия на кнопку */
+.cart_form .submit-order-btn:active {
+  transform: scale(0.98);
+}
+
+/* ================= МОБИЛЬНАЯ ВЕРСИЯ (МОДАЛКА) ================= */
+@media (max-width: 768px) {
+    .burger_menu {
+        display: flex; /* Показываем бургер на мобилках */
+    }
+
+    /* Превращаем навигацию в полноэкранное модальное окно */
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Изначально меню полностью спрятано слева за экраном */
+        width: 100%;
+        height: 100vh;
+        background-color: #dfbfa8; /* Цвет фона футера/салона */
+        flex-direction: column;   /* Выстраиваем ссылки в столбик */
+        justify-content: center;
+        gap: 30px;
+        z-index: 90;
+        transition: left 0.4s ease; /* Плавное выезжание сбоку */
+    }
+
+    /* Класс, который будет добавлять JS при клике (открытая модалка) */
+    .navigation.open {
+        left: 0; /* Меню выезжает на весь экран */
+    }
+
+    /* На мобилках логотип внутри меню лучше скрыть или поставить наверх */
+    .header_img {
+        order: -1; /* Переносит логотип в самый верх списка */
+        margin-bottom: 20px;
+    }
+
+    .header_link {
+        font-size: 24px; /* Увеличиваем ссылки, чтобы по ним было удобно тапать */
+    }
+
+    /* Анимация превращения бургера в крестик при открытой модалке */
+    .burger_menu.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .burger_menu.open span:nth-child(2) {
+        opacity: 0; /* Прячем среднюю линию */
+    }
+    .burger_menu.open span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
+@media (max-width: 996px){
+  .treat {
+    padding: 40px 0;
+  }
+
+  /* Делаем заголовки чуть меньше, чтобы они помещались на экран телефона */
+  .treat_welcome_title {
+    font-size: 1.8rem;
+  }
+
+  .treat_welcome_desk {
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+    padding: 0 15px; /* Чтобы текст не прилипал к краям экрана */
+  }
+
+  /* ГЛАВНОЕ: Разворачиваем карточку из строки в колонку */
+  .treat_wrapper_card,
+  .treat_wrapper_card:nth-child(even) {
+    flex-direction: column; /* Картинка теперь будет НАД текстом */
+    gap: 20px;              /* Уменьшаем расстояние между картинкой и текстом */
+    margin-bottom: 45px;    /* Уменьшаем отступ между блоками */
+    padding: 0 15px;        /* Отступы по бокам для мобилок */
+  }
+
+  /* Делаем картинку на весь экран телефона */
+  .treat_img {
+    width: 250px;
+    height: 250px;         /* Фиксируем высоту, чтобы картинка не была гигантской */
+    object-fit: cover;     /* Картинка красиво обрежется без искажений пропорций */
+  }
+
+  /* Блок с текстом теперь тоже занимает всю ширину */
+  .treat_wrapper {
+    width: 100%;
+  }
+
+  .treat_tilte {
+    font-size: 1.4rem;
+    text-align: center;    /* Центрируем название категории на мобилке */
+  }
+
+  .treat_desk {
+    font-size: 0.85rem;
+    text-align: center;    /* Центрируем описание */
+    margin-bottom: 20px;
+  }
+
+  /* Корректируем список услуг */
+  .treat_item_wrapper {
+    gap: 12px;
+  }
+
+  /* Сами строчки услуг */
+  .treat_name, 
+  .treat_price {
+    font-size: 0.9rem;     /* Чуть уменьшаем шрифт для мелких экранов */
+  }
+  .add{
+    height: 100%;
+  }
+  .add_wraper{
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .add_title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 8px;
+    text-transform: uppercase;
+    color: #6b0606;
+  }
+  .add_desk {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 20px;
+    color: #000;
+  }
+  .form_row{
+    flex-direction: column;
+  }
+  .add_img {
+    height: 372px;
+    width: 450px;
+    background-size: cover;
+
+  }
+  .skidka_img {
+    width: 24px;
+  }
+  .skidka_text {
+        font-size: 12px;
+    }
+
+}
+
+@media(max-width: 550px){
+  .add_img {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+
+  }
+
+}

@@ -1,0 +1,969 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
+:root {
+  --font-family: "Inter", sans-serif;
+  --font3: "Imperial Script", sans-serif;
+  --second-family: "Abhaya Libre", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh; 
+  scroll-behavior: smooth; 
+  text-rendering: optimizeSpeed;
+  line-height: 1.5; 
+}
+
+.container {
+  max-width: 1400px;     
+  width: 100%;           
+  margin: 0 auto;        
+  padding: 0 15px; 
+}
+
+ul, ol {
+  list-style: none;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.skidka {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background: #6b0606;
+    padding: 11px 0;
+    gap: 10px;
+}
+.skidka_text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    
+}
+
+.header .container  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 32px;
+}
+
+.social_media {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    
+
+}
+.header_link {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    transition: all 0.3s ease;
+}
+.header_link:hover{
+  font-weight: 600;
+}
+
+
+.welcome .container {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.welcome_text {
+  font-family: var(--font3);
+  font-weight: 400;
+  font-size: 100px;
+  color: #6b0606;
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding-bottom: 40px;
+}
+
+.welcome_text::after{
+  content: "";
+  background-image: url("../img/lotus_big.png");
+  position: absolute;
+  display: block; /* Позволяет задать ширину и высоту */
+  background-size: contain; /* Картинка автоматически впишется в 256x256px */
+  background-repeat: no-repeat; /* Запрещает повторение картинки */
+  width: 256px;
+  height: 256px;
+  right: 89px;
+  top: -64px;
+  z-index: 1;
+
+}
+
+.welcome_img{
+  background-image: url('../img/welcome.png'); 
+  max-width: 1920px; /* Картинка не станет шире этого значения */
+  margin: 0 auto;    /* Центрируем блок на огромных мониторах */
+  height: 520px;
+  background-size: cover;
+  background-position: center;
+}
+
+.elegans .container {
+  padding: 60px 0;
+}
+
+.elegans_title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 42px;
+  text-align: center;
+  color: #6b0606;
+  width: 967px;
+  margin: 0 auto;
+}
+.elegans_desk {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  width: 1100px;
+  margin: 0 auto;
+}
+.elegans_card_wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+.elegand_card {
+  position: relative;
+  gap: 24px;
+  height: 320px;
+  width: 306px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+}
+
+.elegand_card:hover{
+  transform: scale(1.03) translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); 
+}
+
+.elegant_card_wraper{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px; 
+}
+
+
+.elegans_text {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  color: #fff;
+}
+
+.treat .container {
+  display: flex;
+  gap: 200px;
+  align-items: center;
+}
+ 
+.treat_tilte {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 50px;
+  color: #6b0606;
+  padding-bottom: 20px;
+}
+.treat_desk {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+  padding-bottom: 28px;
+}
+
+.treat_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  padding-bottom: 24px;
+}
+.treat_name {
+ 
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  color: #000;
+  display: flex;
+  flex: 1;
+  align-items: baseline;
+}
+.treat_name::after{
+  
+  content: "";
+  flex: 1;
+  margin: 0 8px;
+  
+  border-bottom: 2px dotted #ccc;
+}
+.treat_from{
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.treat_price {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #6b0606;
+}
+
+.teat_all{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #6b0606;
+  cursor: pointer;
+}
+.testi{
+  background: linear-gradient(to bottom,  #f3e2d5 50%, #ffffff 50%);
+
+}
+.testi .container {
+   
+   margin: 0 auto;
+   padding-bottom: 120px;
+}
+
+.testi_title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 50px;
+  text-align: center;
+  color: #6b0606;
+  padding-top: 40px;
+}
+.title_desk {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.testi_wrapper {
+  width: 856px;
+  height: 372px;
+  box-shadow: 0 6px 10px 0 rgba(223, 191, 168, 0.1);
+  background: #fff;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  
+}
+
+.testi_wrapper::after{
+  position: absolute;
+  content: "";
+  background-image: url('../img/cu.png');
+  width: 88px;
+  height: 88px;
+  top: -24px;
+  left: -40px;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+.testi_wrapper::before{
+  position: absolute;
+  content: "";
+  background-image: url('../img/cu.png');
+  width: 88px;
+  height: 88px;
+  bottom:  -24px;
+  right: -40px;
+  background-repeat: no-repeat;
+  z-index: 2;
+  transform: scaleY(-1) scaleX(-1);
+}
+.testi_avatar_wrapper {
+  position: relative;
+  width: 300px;
+  height: 372px;
+}
+.testI-avatar {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+
+.testi_1{
+  top: 24%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+
+.testi_1:hover{
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.testi_2:hover{
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.testi_3:hover{
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+
+.testi_2{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.testi_3{
+  bottom: 2%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+.active_ava{
+  width: 100px;
+  height: 100px;
+}
+
+.testi_right {
+  width: 566px;
+  position: relative; 
+  min-height: 115px; 
+
+}
+.testi_name {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  color: #6b0606;
+}
+.happy_client {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: rgba(0, 0, 0, 0.5);
+  }
+.testi_ot {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+}
+
+.testi_com {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  width: calc(100% - 110px); 
+}
+
+.active_com{
+  opacity: 1;
+  visibility: visible;
+}
+
+.pro  {
+  background: #f3e2d5;
+}
+
+.img_pro {
+  background-image: url('../img/profesional.png'); 
+  margin: 0 auto;    /* Центрируем блок на огромных мониторах */
+  height: 520px;
+  background-size: cover;
+  background-position: center bottom;
+}
+.pro_bottom { 
+  padding: 60px 0;
+  
+
+}
+.pro_wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 180px;
+}
+.pro_card {
+
+  text-align: center;
+  width: 282px;
+}
+.pro_card_img {
+  margin: 0 auto;
+}
+.pro_card_title {
+  font-family: var(--font-family);
+font-weight: 600;
+font-size: 20px;
+text-align: center;
+color: #6b0606
+}
+.pro_card_desk {
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.shop_grid {
+  display: flex;
+  gap: 30px; /* Расстояние между карточками */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shop_section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* Стили заголовков */
+.shop_header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.shop_title {
+  font-family: var(--font-family);
+  font-size: 36px;
+  font-weight: 500;
+  color: #6b0606; /* Твой фирменный цвет */
+  margin-bottom: 16px;
+}
+
+.shop_subtitle {
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: #777777;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Сетка Flexbox */
+.shop_grid {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.product_card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрируем всё внутри карточки */
+  text-align: center;
+}
+
+/* Контейнер для картинок (выравнивает баночки по нижней полке) */
+.product_img_box {
+  width: 100%;
+  height: 240px; /* Высота подбирается под самую высокую кисть/банку */
+  display: flex;
+  align-items: flex-end; /* Прижимает к низу */
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.product_img {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Информация о товаре */
+.product_name {
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.product_price {
+  font-family: var(--font-family);
+  font-size: 14px;
+  color: #777777;
+}
+
+/* Кнопки переключения мл */
+.product_sizes {
+  display: flex;
+  gap: 6px;
+  margin-top: 14px;
+  min-height: 24px; /* Резервирует место, чтобы четвертая карточка не прыгала вверх */
+}
+
+.size_btn {
+  background: transparent;
+  border: 1px solid #6b0606;
+  color: #6b0606;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.size_btn:hover {
+  background: rgba(107, 6, 6, 0.1);
+}
+
+.size_btn.active {
+  background: #6b0606;
+  color: #ffffff;
+}
+
+.insta_title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 50px;
+  text-align: center;
+  color: #6b0606;
+}
+.insta_subtitle {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+.instagram_section {
+  width: 100%; /* Занимает всю ширину экрана */
+  padding: 80px 0 0 0; /* Снизу отступ 0, так как картинки идут до конца блока */
+}
+
+.insta_header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0 20px; /* Чтобы текст не лип к краям на мобилках */
+}
+
+/* Магия CSS Grid */
+.insta_grid {
+  display: grid;
+  /* Создаем ровно 5 колонок, каждая забирает одинаковую 1 часть (fraction) */
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 0; /* Между картинками нет расстояния, как в макете */
+}
+
+.insta_item {
+  display: block;
+  position: relative;
+  aspect-ratio: 1 / 1; /* Делает каждую ячейку строго квадратной */
+  overflow: hidden;
+}
+
+.insta_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Идеально вписывает фотку в квадрат, обрезая лишнее, без искажений */
+  transition: transform 0.4s ease; /* Готовим плавный ховер */
+}
+/* При ховере плавно увеличиваем картинку */
+.insta_item:hover img {
+  transform: scale(1.05);
+}
+
+/* Опционально: делаем лёгкое полупрозрачное напыление поверх фотки */
+.insta_item::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(107, 6, 6, 0.15); /* Твой бордовый оттенок с прозрачностью */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.insta_item:hover::after {
+  opacity: 1; /* Напыление плавно проявляется */
+}
+
+.footer {
+  background: #dfbfa8;
+  padding: 60px 0; /* Отступы сверху и снизу, чтобы футер не был зажатым */
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column; /* Выстраиваем все элементы строго в вертикальный столбик */
+  align-items: center;    /* Магия: центрирует абсолютно все элементы по горизонтали */
+  text-align: center;     /* Центрирует многострочный текст внутри <p> */
+}
+
+.footer_title::after {
+    content: "";
+    background-image: url(../img/lotus_big.png);
+    position: absolute;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 354px;
+    height: 392px;
+    right: -69px;
+    top: -144px;
+    z-index: 1;
+}
+
+.footer_title {
+  position: relative;
+  font-family: var(--font3);
+  font-weight: 400;
+  font-size: 50px;
+  color: #6b0606;
+}
+
+.footer_desk {
+  font-family: var(--font-family);
+  font-size: 14px;
+  color: #555;
+  max-width: 450px; /* Ограничиваем ширину текста, чтобы он красиво переносился */
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.footer_social_wraper {
+  display: flex;
+  gap: 12px; /* Расстояние между иконками/ссылками соцсетей */
+}
+
+.footer_link {
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 996px) {
+  .elegans_title{
+    font-size: 24px;
+    max-width: 600px; /* Больше этого размера текст вширь не пойдет */
+    width: 100%;      /* На мобилках текст сожмется ровно по ширине экрана */
+    box-sizing: border-box;
+  }
+  .insta_grid {
+  display: grid;
+  /* Создаем ровно 5 колонок, каждая забирает одинаковую 1 часть (fraction) */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 0; /* Между картинками нет расстояния, как в макете */
+}
+  .elegans_desk{
+    font-size: 16px;
+    max-width: 600px; /* Больше этого размера текст вширь не пойдет */
+    width: 100%;      /* На мобилках текст сожмется ровно по ширине экрана */
+    box-sizing: border-box;
+    
+  }
+  .shop_grid {
+    display: flex;
+    flex-direction: column; /* На телефонах — строго в один столбик */
+    align-items: center;
+  }
+  .product_card {
+    width: 100%;
+    max-width: 290px; /* Чтобы карточка не растягивалась на весь экран телефона */
+  }
+  .elegans_card_wrapper {
+    display: flex;
+    flex-direction: column; /* На телефонах — строго в один столбик */
+    align-items: center;
+    gap: 20px;
+  }
+  .elegand_card {
+    width: 100%;
+    max-width: 290px; 
+    
+  }
+  .treat .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем всё по горизонтали */
+    gap: 40px;          /* Делаем красивый отступ между картинкой и прайсом */
+    padding: 0 20px;     /* Безопасные отступы по бокам, чтобы текст не лип к экрану */
+  }
+
+  /* 2. Делаем картинку адаптивной */
+  .treat_img {
+    width: 100%;
+    max-width: 450px; /* Чтобы на планшетах картинка не раздувалась на весь экран */
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* 3. Делаем блок с ценами резиновым */
+  .treat_wrapper {
+    width: 100%;
+    max-width: 600px; /* Ограничиваем максимальную ширину прайса для аккуратности */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем заголовки и кнопку внутри */
+  }
+
+  /* 4. Выравниваем заголовки по центру на мобилках */
+  .treat_tilte {
+    font-size: 28px; /* Уменьшаем размер шрифта, чтобы он не давил */
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .treat_desk {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+
+  /* 5. Обёртка для строк прайса */
+  .treat_item_wrapper {
+    width: 100%; /* Прайс растягивается на всю ширину резинового родителя */
+    margin-bottom: 30px;
+  }
+
+  /* 6. Сами строчки с пунктиром (они плавно сжимаются сами благодаря нашему прошлому флекс-коду) */
+  .treat_item {
+    width: 100%;
+  }
+  .testi .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+  }
+  
+  .testi_title {
+    font-size: 32px; /* Уменьшаем гигантский заголовок */
+  }
+
+  /* 2. Делаем главную белую карточку резиновой и вертикальной */
+  .testi_wrapper {
+    width: 100%;
+    height: auto; /* Сбрасываем фиксированную высоту 372px */
+    flex-direction: column; /* Лица теперь сверху, текст — снизу */
+    justify-content: center;
+    padding: 40px 20px; /* Внутренние отступы, чтобы текст не лип к краям */
+    gap: 30px;
+  }
+
+  /* 3. Укрощаем кавычки, чтобы они не взрывали верстку по бокам */
+  .testi_wrapper::after {
+    width: 44px; /* Уменьшаем размер кавычек в два раза */
+    height: 44px;
+    background-size: contain;
+    top: 15px;
+    left: 15px; /* Переносим внутрь карточки, в верхний левый угол */
+  }
+  
+  .testi_wrapper::before {
+    width: 44px;
+    height: 44px;
+    background-size: contain;
+    bottom: 15px;
+    right: 15px; /* Переносим внутрь карточки, в нижний правый угол */
+  }
+
+  /* 4. Превращаем круг аватарок в горизонтальный ряд */
+  .testi_avatar_wrapper {
+    width: 100%;
+    height: auto; /* Сбрасываем высоту 372px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Расстояние между лицами */
+  }
+
+  /* Сбрасываем старые координаты ПК-версии и убираем transform, который ломал scale */
+  .testi_1, .testi_2, .testi_3 {
+    position: static; /* Вырываем их из абсолютного позиционирования в обычный flex-ряд */
+    transform: none; 
+  }
+
+  /* Возвращаем hover-эффект без использования translate */
+  .testi_1:hover, .testi_2:hover, .testi_3:hover {
+    transform: scale(1.1);
+  }
+
+  /* 5. Настраиваем размеры аватарок на мобилках */
+  .testI-avatar {
+    width: 60px;  /* Обычные аватарки делаем чуть меньше */
+    height: 60px;
+  }
+
+  .active_ava {
+    width: 75px;  /* Активная аватарка по-прежнему выделяется размером */
+    height: 75px;
+    border: 2px solid #6b0606;
+    border-radius: 50%;
+  }
+
+  /* 6. Адаптируем правый блок с текстом */
+  .testi_right {
+    width: 100%;
+    text-align: center; /* Центрируем имя и отзыв для мобильного дизайна */
+    min-height: 160px;  /* Резервируем высоту под самый длинный отзыв */
+  }
+
+  .testi_name {
+    display: flex;
+    flex-direction: column; /* Имя и статус "счастливый клиент" теперь друг под другом */
+    gap: 4px;
+    margin-bottom: 16px;
+  }
+
+  /* 7. Заставляем абсолютные отзывы занимать всю ширину новой резиновой карточки */
+  .testi_com {
+    width: 100%; /* Убираем calc(100% - 110px), который ломал ширину */
+  }
+  .pro_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .insta_title {
+    font-size: 24px;
+  }
+  .welcome_text {
+    font-size: 75px;
+  }
+  .welcome_text::after{
+    height: 256px;
+    right: 22px;
+  }
+  .skidka_img{
+    width: 24px;
+  }
+  .skidka_text{
+    font-size: 12px;
+  }
+}
+.burger_menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100; /* Чтобы бургер всегда был поверх модалки */
+}
+
+.burger_menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #6b0606; /* Твой фирменный бордовый */
+    transition: all 0.3s ease;
+}
+
+/* ================= МОБИЛЬНАЯ ВЕРСИЯ (МОДАЛКА) ================= */
+@media (max-width: 768px) {
+    ::after{
+      display: none;
+    }
+    .burger_menu {
+        display: flex; /* Показываем бургер на мобилках */
+    }
+
+    /* Превращаем навигацию в полноэкранное модальное окно */
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Изначально меню полностью спрятано слева за экраном */
+        width: 100%;
+        height: 100vh;
+        background-color: #dfbfa8; /* Цвет фона футера/салона */
+        flex-direction: column;   /* Выстраиваем ссылки в столбик */
+        justify-content: center;
+        gap: 30px;
+        z-index: 90;
+        transition: left 0.4s ease; /* Плавное выезжание сбоку */
+    }
+
+    /* Класс, который будет добавлять JS при клике (открытая модалка) */
+    .navigation.open {
+        left: 0; /* Меню выезжает на весь экран */
+    }
+
+    /* На мобилках логотип внутри меню лучше скрыть или поставить наверх */
+    .header_img {
+        order: -1; /* Переносит логотип в самый верх списка */
+        margin-bottom: 20px;
+    }
+
+    .header_link {
+        font-size: 24px; /* Увеличиваем ссылки, чтобы по ним было удобно тапать */
+    }
+
+    /* Анимация превращения бургера в крестик при открытой модалке */
+    .burger_menu.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .burger_menu.open span:nth-child(2) {
+        opacity: 0; /* Прячем среднюю линию */
+    }
+    .burger_menu.open span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
